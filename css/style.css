@@ -3,6 +3,8 @@
   margin: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 body,
@@ -26,9 +28,15 @@ h1 {
 .btn {
   border: 2px solid #fff;
   display: inline-block;
-  padding: 10px 25px;
+  padding: 12.5px 25px;
   border-radius: 50px;
   background-color: #fff;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff !important;
+  cursor: pointer;
 }
 
 main .container {
@@ -38,6 +46,13 @@ main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -100,5 +115,62 @@ main .card__desc {
 
 main .card__btn {
   margin-top: 80px;
+}
+
+@media (max-width: 480px) {
+  main .container {
+    max-width: 480px;
+    min-height: inherit;
+    margin: 100px 25px;
+    display: block;
+  }
+  main .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main .card {
+    padding: 50px;
+  }
+  main .card:nth-child(1) {
+    border-radius: 8px 8px 0px 0px;
+    background-color: #e38826;
+  }
+  main .card:nth-child(1) .card__btn {
+    color: #e38826;
+  }
+  main .card:nth-child(2) {
+    background-color: #006970;
+  }
+  main .card:nth-child(2) .card__btn {
+    color: #006970;
+  }
+  main .card:nth-child(3) {
+    background-color: #004241;
+    border-radius: 0px 0px 8px 8px;
+  }
+  main .card:nth-child(3) .card__btn {
+    color: #004241;
+  }
+  main .card__title {
+    margin: 25px 0px;
+  }
+  main .card__desc {
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 22.5px;
+  }
+  main .card__btn {
+    margin-top: 25px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

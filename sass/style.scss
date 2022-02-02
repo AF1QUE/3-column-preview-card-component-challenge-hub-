@@ -8,8 +8,7 @@ main {
     max-width: 925px;
     min-height: 100vh;
     margin: 0px auto;
-    display: flex;
-    align-items: center;
+    @include flex(row, flex-start, center);
   }
 
   .cards {
@@ -57,3 +56,5 @@ main {
     }
   }
 }
+
+@import "responsive";

@@ -1,0 +1,55 @@
+@media (max-width: 480px) {
+  main {
+    .container {
+      max-width: 480px;
+      min-height: inherit;
+      margin: 100px 25px;
+      display: block;
+    }
+
+    .cards {
+      @include flex(column, space-between, flex-start);
+    }
+
+    .card {
+      padding: 50px;
+
+      &:nth-child(1) {
+        border-radius: 8px 8px 0px 0px;
+        background-color: $brightOrange;
+
+        .card__btn {
+          color: $brightOrange;
+        }
+      }
+      &:nth-child(2) {
+        background-color: $darkCyan;
+
+        .card__btn {
+          color: $darkCyan;
+        }
+      }
+      &:nth-child(3) {
+        background-color: $veryDarkCyan;
+        border-radius: 0px 0px 8px 8px;
+
+        .card__btn {
+          color: $veryDarkCyan;
+        }
+      }
+
+      &__title {
+        margin: 25px 0px;
+      }
+
+      &__desc {
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 22.5px;
+      }
+
+      &__btn {
+        margin-top: 25px;
+      }
+    }
+  }
+}
